@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "개드립 내 댓글 삭제",
+  "version": "1.0",
+  "description": "dogdrip.net에서 내 댓글을 자동으로 삭제합니다.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["*://*.dogdrip.net/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "내 댓글 삭제",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.dogdrip.net/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
